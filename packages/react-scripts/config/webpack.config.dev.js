@@ -164,6 +164,7 @@ module.exports = {
           {
             test: /\.(js|jsx|mjs)$/,
             include: paths.appSrc,
+            exclude: /node_modules\/(?!(@local\/component-library)\/).*/,
             loader: require.resolve('babel-loader'),
             options: {
               // @remove-on-eject-begin
